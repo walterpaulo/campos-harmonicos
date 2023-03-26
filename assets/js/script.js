@@ -98,17 +98,12 @@ function carregarDados([]) {
             // tipo de escala
             const campoHarmonico = document.createElement('div');
             campoHarmonico.setAttribute('class', 'campo-harmonico ' + nota.grau);
-            // campoHarmonico.setAttribute('data-description', nota.dataDescricao);
-            campoHarmonico.setAttribute('data-description', "nota.dataDescricao");
-            
+            campoHarmonico.setAttribute('data-description', nota.dataDescricao);
+
             const notaFormada = document.createElement('div');
             notaFormada.setAttribute('class', "notaSvg");
-            this.formarNota("b",notaFormada);
+            this.formarNota("b", notaFormada);
             campoHarmonicoInner.appendChild(notaFormada);//svg-container
-
-
-
-
 
             // adicionar na tabela
             campoHarmonico.insertAdjacentElement('beforeend', campoHarmonicoInner)
@@ -121,7 +116,6 @@ var exemploNota = document.getElementById("exemplo-nota");
 this.carregarDados(tons)
 
 
-this.formarNota();
 function formarNota(nota, pai) {
     var imageSvg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 
@@ -155,7 +149,6 @@ function formarNota(nota, pai) {
     nota.setAttribute("d", "M74.9062 16.2227H76.3711C76.3242 16.7812 76.168 17.2793 75.9023 17.7168C75.6367 18.1504 75.2637 18.4922 74.7832 18.7422C74.3027 18.9922 73.7188 19.1172 73.0312 19.1172C72.5039 19.1172 72.0293 19.0234 71.6074 18.8359C71.1855 18.6445 70.8242 18.375 70.5234 18.0273C70.2227 17.6758 69.9922 17.252 69.832 16.7559C69.6758 16.2598 69.5977 15.7051 69.5977 15.0918V14.3828C69.5977 13.7695 69.6777 13.2148 69.8379 12.7188C70.002 12.2227 70.2363 11.7988 70.541 11.4473C70.8457 11.0918 71.2109 10.8203 71.6367 10.6328C72.0664 10.4453 72.5488 10.3516 73.084 10.3516C73.7637 10.3516 74.3379 10.4766 74.8066 10.7266C75.2754 10.9766 75.6387 11.3223 75.8965 11.7637C76.1582 12.2051 76.3184 12.7109 76.377 13.2812H74.9121C74.873 12.9141 74.7871 12.5996 74.6543 12.3379C74.5254 12.0762 74.334 11.877 74.0801 11.7402C73.8262 11.5996 73.4941 11.5293 73.084 11.5293C72.748 11.5293 72.4551 11.5918 72.2051 11.7168C71.9551 11.8418 71.7461 12.0254 71.5781 12.2676C71.4102 12.5098 71.2832 12.8086 71.1973 13.1641C71.1152 13.5156 71.0742 13.918 71.0742 14.3711V15.0918C71.0742 15.5215 71.1113 15.9121 71.1855 16.2637C71.2637 16.6113 71.3809 16.9102 71.5371 17.1602C71.6973 17.4102 71.9004 17.6035 72.1465 17.7402C72.3926 17.877 72.6875 17.9453 73.0312 17.9453C73.4492 17.9453 73.7871 17.8789 74.0449 17.7461C74.3066 17.6133 74.5039 17.4199 74.6367 17.166C74.7734 16.9082 74.8633 16.5938 74.9062 16.2227Z");
     nota.setAttribute("fill", "black");
     imageSvg.appendChild(nota);
-
     pai.appendChild(imageSvg);
 
 }
