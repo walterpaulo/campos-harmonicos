@@ -16,18 +16,34 @@ body {
     background-color: #fff;
     transform: scale(1.12);
     padding: 10px;
-
 }
 
 .notaSvg:hover svg {
     display: block;
     background-color: #fff;
+    position: absolute;
+    left: -50%;
+    bottom: -280px;
     width: 150px;
     height: 200px;
     padding: 10px;
     transform: scale(1.12);
     z-index: 10;
+    
+    animation-duration: 1s;
+    animation-name: slidein;
+
 }
+
+@keyframes slidein {
+    from {
+        bottom: -250px;
+    }
+  
+    to {
+      bottom: -280px;
+    }
+  }
 
 .notaSvg {
     position: absolute;
